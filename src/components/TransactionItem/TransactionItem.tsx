@@ -9,9 +9,9 @@ interface TransactionItemProps {
 
 const TransactionItem: React.FC<TransactionItemProps> = ({ transaction, onDelete }) => {
 	const formattedDate = new Date(transaction.date).toLocaleDateString();
-	const formattedAmount = new Intl.NumberFormat('en-US', {
+	const formattedAmount = new Intl.NumberFormat('de-DE', {
 		style: 'currency',
-		currency: 'USD',
+		currency: 'EUR',
 	}).format(Math.abs(transaction.amount));
 
 	return (
